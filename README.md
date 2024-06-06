@@ -1,4 +1,4 @@
-# Mini-projet-Syst-me-de-gestion-de-biblioth-que-
+# Mini-projet-Systeme-de-gestion-de-bibliotheque.
 Système de gestion de bibliothèque utilisant les structures de données (listes, piles, files, et arbres) et les fichier
 INTRODUCTION 
 Les listes chaînées sont des structures de données fondamentales en informatique, largement utilisées pour stocker et manipuler des collections d'éléments de manière dynamique. Elles offrent une alternative flexible et efficace aux tableaux statiques, permettant l'insertion, la suppression et la modification des éléments de manière efficace.
