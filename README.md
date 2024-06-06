@@ -7,7 +7,9 @@ Ce projet a pour objectif de trouver un livre s’il est disponible à l’aide 
 INCLUSION DE BEBLEOTHEQUE
 
 #include <stdlib.h>
+
 #include <stdio.h>
+
 #include <string.h>
 
 
@@ -15,54 +17,93 @@ INCLUSION DE BEBLEOTHEQUE
 INSTRECTIONS DU PROGRAMME
 
 struct Book {
+
     char title[100];
+    
     char author[100];
+    
     char isbn[20];
+    
     int is_available;
+    
 };
+
 struct Node {
+
 struct Book book;
+
 struct Node* next;
+
 };
 struct Node* create_book(struct Book book) {
+
 struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+
 node->book = book;
+
 node->next = NULL;
+
 return node;
+
 }
 
 int main() {  
-struct Book book1 = {       
+
+struct Book book1 = { 
+
 .title = "The Hitchhiker's Guide to the Galaxy",
-.author = "Douglas Adams",      
-.isbn = "9780345391803",        
+
+.author = "Douglas Adams",
+
+.isbn = "9780345391803", 
+
 .is_available = 1
+
 };
 
 struct Book book2 = {
+
 .title = "The Lord of the Rings",
+
 .author = "J.R.R. Tolkien",
+
 .isbn = "9780544003415",
+
 .is_available = 0   
 };
 
 struct Book book3 = {
-.title = "1984",      
+
+.title = "1984",
+
 .author = "George Orwell",
+
 .isbn = "9780451524935",
+
 .is_available = 1
+
 };
 
 struct Node* head = create_book(book1);
+
 head->next = create_book(book2);
+
 head->next->next = create_book(book3);
+
 struct Node* current = head;
+
 while (current != NULL) {
+
 printf("%s by %s (ISBN: %s), available: %s\n",
+
 current->book.title,
+
 current->book.author,
+
 current->book.isbn,
+
 current->book.is_available ? "yes" : "no"
+
 );
 
 current = current->next;
