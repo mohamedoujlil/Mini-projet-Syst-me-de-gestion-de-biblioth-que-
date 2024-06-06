@@ -10,6 +10,8 @@ INCLUSION DE BEBLEOTHEQUE
 #include <stdio.h>
 #include <string.h>
 
+
+
 INSTRECTIONS DU PROGRAMME
 
 struct Book {
@@ -28,6 +30,7 @@ node->book = book;
 node->next = NULL;
 return node;
 }
+
 int main() {  
 struct Book book1 = {       
 .title = "The Hitchhiker's Guide to the Galaxy",
@@ -35,18 +38,21 @@ struct Book book1 = {
 .isbn = "9780345391803",        
 .is_available = 1
 };
+
 struct Book book2 = {
 .title = "The Lord of the Rings",
 .author = "J.R.R. Tolkien",
 .isbn = "9780544003415",
 .is_available = 0   
 };
+
 struct Book book3 = {
 .title = "1984",      
 .author = "George Orwell",
 .isbn = "9780451524935",
 .is_available = 1
 };
+
 struct Node* head = create_book(book1);
 head->next = create_book(book2);
 head->next->next = create_book(book3);
@@ -58,12 +64,16 @@ current->book.author,
 current->book.isbn,
 current->book.is_available ? "yes" : "no"
 );
+
 current = current->next;
 }
+
 return 0; 
 }
 
+
 CONCLISION
+
 
 En conclusion, la saisie du nom d'un livre dans un programme et la vérification de son existence sont désormais à portée de main grâce aux avancées technologiques. L'utilisation de programmes et d'applications dédiés facilite grandement la recherche de livres et offre une expérience plus efficace.
 Que vous soyez un lecteur passionné, un chercheur ou simplement curieux, ces programmes vous permettent d'accéder rapidement et facilement à une mine d'informations sur les livres du monde entier. Ils vous évitent de perdre du temps à fouiller des bibliothèques physiques ou à naviguer sur Internet à la recherche de renseignements.
